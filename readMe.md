@@ -71,15 +71,16 @@ Depending on the type of response ,you have a status code.)
 **Basic Express App Structure**
 
 ```
+(a)Import express.
 const express = require('express')
 
 
+(b)Initialize express.
 //Init Express
-
 const app = express();
 
 
-//Create your endpoints/route handlers
+(c)Creating your endpoints/route handlers  which incoporate a Call back function which takes in a request and a response.
 
 app.get('/'. function(req, res){
 
@@ -87,10 +88,18 @@ res.send('Hello World!');
 
 });
 
-//Listen on a Port
+(d)Listening on a Port
 
 app.listen(5000);
 
+
+```
+
+**NOTICE**
+
+```
+You cannot use ES2016 MODULES Directly with node.
+You normally use a transpiler an example being Babel
 
 ```
 
@@ -103,7 +112,7 @@ From within your route the following can be achieved:
 
 app.get('/'. function(req, res){
 
-(a)Fetch  data from a database
+(a)Fetch  data from a database(PGSQL,MONGO MYSQL)
 (b)Load Pages
 (c)Return Json
 (d)Full access to request and response.
@@ -111,9 +120,29 @@ app.get('/'. function(req, res){
 });
 
 
-(II)
+(II)Handling requests/routes is simple.
 
+(III)Express has a router so we can store routes in separate
+files and export...Wow!!
+
+(IV)We can parse incoming data into express with body parser.
 
 ```
 
+**EXPRESS MIDDLEWARE**
 
+```
+Middleware functions are functions that have access to the request and response object.Just as we do within routes
+
+Express has built in middleware but middleware comes from 3rd party packages as well as custom middleware.
+
+The middleware is capable of :
+
+(a)Executing any code.
+(b)Making changes to the request/response objects
+(c)Ending the response cycle
+(d)Calling the next middleware in the stack.
+
+It more or less a stack of functions that execute whenever a request is made to the server.
+
+```
