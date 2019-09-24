@@ -146,3 +146,32 @@ The middleware is capable of :
 It more or less a stack of functions that execute whenever a request is made to the server.
 
 ```
+
+```
+(1)npm init -y -initialize package.json
+
+(2)npm i express -install express
+
+(3)node nameofFile -eg node index..react npm start.
+
+(4)Every route we create has got access to the request and response object.There are properties of a HTTP Object eg contentType,Headers etc.
+
+(5)Installing nodemon for automatic page reload-npm i -D nodemon
+
+(6)Res Methods.
+We have different options entailing the sending of a response.
+eg..
+(i)res.send...
+(ii)res.render() -if we have a template engine.we can render a HTML Template where we can put in variables etc.
+
+(iii)res.json()
+
+(7)
+It is rather using a static folder rather than path module which will lead you into having much more routes in one file..
+
+(8)You can hit an express route with any technologies of your choice..whether react, vue,angular or postman this this is the enpoints approach.
+
+
+ res.json() takes care of everything when using express and you do not have even to stringify.
+
+```
