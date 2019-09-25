@@ -263,3 +263,69 @@ In ES6 if the key and value are the same you may as well just return the key and
 filter leaves you with an array of what you want to filter.
 
 ```
+
+**RenderingTemplateEngines**
+
+```
+There are a Couple of templating engines that you can use.
+
+(i)Express Handle Bars.
+
+You can create views and render as well as even a mainaLayout.
+
+└── views
+    └── layouts
+        └── main.handlebars
+
+It is included in  the Main Index.JS File after installation.
+
+Template Engine Syntax -> {{{body}}}
+
+
+This means that you can either Make a NodeJS
+API and consume it with a frontend framework of your choice or you may as well make a Full Server Side App with express via the templateEngine.
+
+Three approaches to render your templates:
+
+(a)Node JS FILE System for __dirname where you render based on the filePath.
+
+(b)You can use a template engine..Example HandleBars and Pug..The former is more preffered.
+
+(c)You can make you node app entirely as an api which can be consumed by a completely different application example React, Vue.
+
+N/B
+
+All the Various  ways Must be included in your Main File(Index.Js).
+
+Kindly refer to the projects index.JS.
+URL Encoded handles the form data.
+
+
+NOTE!!!
+
+(a)Return JSON- when using an API
+(b)Return Redirect-When using a server rendered Application.
+
+It is very important to know how to break code and return responses..when developing apps.
+```
+
+```
+Greatful.
+
+Next Milestone is authenctication with express.
+
+Either passport or Jwtokens.
+
+
+
+```
+
+```
+Notes by Mbugua Caleb
+
+```
+
+```
+
+Tutor -Brad Travesy.
+```

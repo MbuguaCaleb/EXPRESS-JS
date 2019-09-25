@@ -46,7 +46,11 @@ router.post('/', (req, res) => {
 
   //sending back a response
 
+  //When using an Api You return a JSON.
   res.json(members);
+
+  //Server rendered application
+  //res.redirect('/');
 });
 
 //Update Member
