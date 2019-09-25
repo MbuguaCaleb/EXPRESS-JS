@@ -145,6 +145,8 @@ The middleware is capable of :
 
 It more or less a stack of functions that execute whenever a request is made to the server.
 
+You can do a lot of things with regards to manipulating a request when using a middleware.
+
 ```
 
 ```
@@ -161,7 +163,15 @@ It more or less a stack of functions that execute whenever a request is made to 
 (6)Res Methods.
 We have different options entailing the sending of a response.
 eg..
+
+
 (i)res.send...
+app.get('/', (req, res) => {
+  // res.send('<h1>Hello World!</h1>');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+
 (ii)res.render() -if we have a template engine.we can render a HTML Template where we can put in variables etc.
 
 (iii)res.json()
@@ -173,5 +183,59 @@ It is rather using a static folder rather than path module which will lead you i
 
 
  res.json() takes care of everything when using express and you do not have even to stringify.
+
+
+
+ (9)Whenever you are importing a module you must use require.
+
+
+```
+
+**Middleware**
+
+```
+
+How it is initialized and how it has got access to the request and response object.
+
+Passing it to the endpoint passes it as an URL Parameter.
+
+Refreshing you knowledge on what is a request and what is a response.Notice res.send() is returning back a response.
+
+
+```
+
+```
+Request parameters are strings , so there are times you have to parse espacially the id.
+
+Higher order array methods.There is one that is called some which checks if an item exists or not.
+
+
+(a)Map
+(b)Filter
+(c)Some
+(d)Array Reduce.
+
+Whenever you pass an ID to a request notice that it is a parameter.Thus you can fetch it as {req.params.id}
+
+```
+
+**ExpressRouter**
+
+```
+Helps in the grouping of routes instead of having all your routes in index.js
+
+Api routes in particular serve Json..
+Routes may also serve templates hence it is great grouping them into a folder.
+
+Introducing a router file in express that helps you group all your routes in one file is
+like a blueprint in flask.
+You use the router key word instead of app.
+
+Knowing how to include files as well as imports like in python is paramount
+when using require of a file in express.
+
+You then import your routes in the main index since this is where your routes are initialized.
+
+
 
 ```

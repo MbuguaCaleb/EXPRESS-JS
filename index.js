@@ -1,43 +1,17 @@
 const express = require('express');
-//importing path node JS Module where you can render a file path
 const path = require('path');
+const logger = require('./middleware/logger');
 
 const app = express();
 
-const members = [
-  {
-    id: 1,
-    name: 'Mbugua Caleb',
-    email: 'mbuguacaleb30@gmail.com',
-    status: 'active'
-  },
-  {
-    id: 2,
-    name: 'Wanjiru Mercy',
-    email: 'wanjirukerei@gmail.com',
-    status: 'inactive'
-  },
-  {
-    id: 3,
-    name: 'Humphrey Karanja',
-    email: 'kereihumphrey@gmail.com',
-    status: 'incative'
-  }
-];
-
-//GETS ALL MEMBERS
-app.get('/api/members', (req, res) => {
-  res.json(members);
-});
+//init Middleware
+//app.use(logger);
 
 //set static folder
-//a Better way to laod all your pages is via static routes.
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.get('/', (req, res) => {
-//   // res.send('<h1>Hello World!</h1>');
-//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
+//Members API Routes
+app.use('/api/members', require('./routes/api/member'));
 
 //first checking for port no in env
 //Helpful in deployment

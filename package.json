@@ -1,5 +1,5 @@
 {
-  "name": "EXPRESS-JS",
+  "name": "express",
   "version": "1.0.0",
   "description": "**ExpressJS**",
   "main": "index.js",
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/MbuguaCaleb/EXPRESS-JS#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
