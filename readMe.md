@@ -236,6 +236,13 @@ when using require of a file in express.
 
 You then import your routes in the main index since this is where your routes are initialized.
 
+You can use the same route name as long as you are using different HTTP Methods.
+
+Rem URL ID is parameter in the request but when making a post you use a request body.
+
+You have to initialize a body parser in the request body for the request to pass.
+As good convention the model name begins with a capital letter.
+
 
 
 ```
