@@ -49,4 +49,47 @@ router.post('/', (req, res) => {
   res.json(members);
 });
 
+//Update Member
+router.put('/:id', (req, res) => {
+  const found = members.some(member => member.id === parseInt(req.params.id));
+
+  if (found) {
+    //remeber data from the body has already been parsed.
+    const updMember = req.body;
+    //fetching a Member
+    members.forEach(member => {
+      if (member.id === parseInt(req.params.id)) {
+        member.name = updMember.name ? updMember.name : member.name;
+
+        member.email = updMember.email ? updMember.email : member.email;
+
+        //return a response
+        res.json({ msg: 'Member updated', member });
+      }
+    });
+  } else {
+    res.status(400).json({
+      msg: `No member with the id of ${req.params.id}`
+    });
+  }
+});
+
+//Delete Member
+router.delete('/:id', (req, res) => {
+  const found = members.some(member => member.id === parseInt(req.params.id));
+
+  if (found) {
+    //filtering out all members apart from the one who was deleted.
+    //returning the Json Object.
+    res.json({
+      msg: 'Member Deleted!',
+      members: members.filter(member => member.id !== parseInt(req.params.id))
+    });
+  } else {
+    res.status(400).json({
+      msg: `No member with the id of ${req.params.id}`
+    });
+  }
+});
+
 module.exports = router;

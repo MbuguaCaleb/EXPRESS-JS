@@ -246,3 +246,20 @@ As good convention the model name begins with a capital letter.
 
 
 ```
+
+**ExtrernalPackage**
+
+```
+You install it separately as a package then require it and use it in you syntax.a great example is mongosose.Just like in normal ORMs.
+
+
+In ES6 if the key and value are the same you may as well just return the key and leave out the value.
+
+```
+
+**HigherOrderArrayMethods**
+
+```
+filter leaves you with an array of what you want to filter.
+
+```
