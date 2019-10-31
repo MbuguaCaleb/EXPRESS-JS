@@ -329,3 +329,10 @@ Notes by Mbugua Caleb
 
 Tutor -Brad Travesy.
 ```
+
+
+```
+(a)HTTP CRASH COURSE
+
+(B)SIMPLE DEBUGGING CHROME
+```
